@@ -1,4 +1,3 @@
-
 var Module = (function() {
     var _scriptDir = typeof document !== 'undefined' && document.currentScript ? document.currentScript.src : undefined;
     
@@ -44,7 +43,74 @@ var Module = (function() {
   }
   );
   })();
+  // if (typeof exports === 'object' && typeof module === 'object')
+  //       module.exports = Module;
+  //     else if (typeof define === 'function' && define['amd'])
+  //       define([], function() { return Module; });
+  //     else if (typeof exports === 'object')
+  //       exports["Module"] = Module;
+  //     export default (() => {
+  //     const initialize = () => {
+  //         return new Promise(resolve => {
+  //             Module({
+  //                 locateFile() {
+  //                     const i = import.meta.url.lastIndexOf('/')
+  //                     return import.meta.url.substring(0, i) + '/glslang.wasm';
+  //                 },
+  //                 onRuntimeInitialized() {
+  //                     resolve({
+  //                         compileGLSLZeroCopy: this.compileGLSLZeroCopy,
+  //                         compileGLSL: this.compileGLSL,
+  //                     });
+  //                 },
+  //             });
+  //         });
+  //     };
   
+  //     let instance;
+  //     return () => {
+  //         if (!instance) {
+  //             instance = initialize();
+  //         }
+  //         return instance;
+  //     };
+  // })();
+  // (function tryToExport(root, factory) {
+  //   if (typeof exports === 'object' && typeof module === 'object')
+  //     module.exports = factory();
+  //   else if (typeof define === 'function' && define.amd)
+  //     define("glslang", [], factory);
+  //   else if (typeof exports === 'object')
+  //     exports["glslang"] = factory();
+  //   else
+  //     root["glslang"] = factory();
+  // })(typeof self !== "undefined" ? self : typeof global !== "undefined" ? global : this, () => {
+  //   const initialize = (wasmPath) => {
+  //     wasmPath = 'http://localhost:7456/glslang.wasm'
+  //     return new Promise(resolve => {
+  //         Module({
+  //             locateFile() {
+  //                 return wasmPath;
+  //             },
+  //             onRuntimeInitialized() {
+  //                 resolve({
+  //                     compileGLSLZeroCopy: this.compileGLSLZeroCopy,
+  //                     compileGLSL: this.compileGLSL,
+  //                 });
+  //             },
+  //         });
+  //     });
+  //   };
+  
+  //   let instance;
+  //   return (wasmPath) => {
+  //       if (!instance) {
+  //           instance = initialize(wasmPath);
+  //       }
+  //       return instance;
+  //   };
+  // });
+
 
   const initialize = (wasmPath) => {
     return new Promise(resolve => {
