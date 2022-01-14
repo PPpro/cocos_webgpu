@@ -1,12 +1,14 @@
 {
   "name": "@cocos/webgpu",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "type": "module",
   "exports": {
     "./glslang": "./glslang.js",
-    "./webgpu": "./webgpu_wasm.js"
+    "./glslang.wasm": "./glslang.wasm",
+    "./webgpu": "./webgpu_wasm.js",
+    "./webgpu.wasm": "./webgpu_wasm.wasm"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
